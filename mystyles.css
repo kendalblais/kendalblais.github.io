@@ -1,0 +1,169 @@
+body {
+    background-color: #fdfffc;
+    margin: 0;
+}
+
+.leftPad{
+    padding-left: 2%;
+}
+
+#websiteName {
+    float: left;
+    width: 60%;
+    height: 100%;
+    margin-right: 0.5%;
+}
+
+.title {
+    font-family: 'Permanent Marker', cursive;
+    color: #011627;
+    text-shadow: 1px 1px #FDFFFC;
+    padding-left: 2%;
+}
+
+.nav-button {
+    background-color: #FF9F1C;
+    border-width: 0.5%;
+    border-bottom-width: 0px;
+    border-style: solid;
+    border-top-left-radius: 50%;
+    border-top-right-radius: 50%;
+    border-color: #011627;
+    color: #011627;
+    text-decoration: none;
+    font-family: 'Permanent Marker', cursive;
+    font-size: 100%;
+    padding: 1% 2%;
+    text-align: center;
+    display: block;
+    float: left;
+    margin-top: 0.5%;
+    height: 100%;
+
+}
+
+
+.nav-button:hover {
+    margin-top: 0px;
+    padding-bottom: 1.5%;
+}
+
+ul#navbar {
+    background-color: #2ec4b6;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+}
+
+.active {
+    background-color: #011627;
+    color: #FF9F1C;
+}
+
+
+
+body div#header{
+    padding-top: 1%;
+    width: 100%;
+    height: 10%;
+    background-color: #2ec4b6;
+} 
+
+.column3 {
+    max-width: 33%;
+    min-width: 33%;
+    overflow: hidden;
+}
+
+#mainPageBody {
+    display: flex;
+    align-items: stretch;
+    justify-content: stretch;
+    width: 100%;
+}
+
+.columnPicture {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+#mainPageInfo {
+    text-align: center;
+    min-height: 30%;
+    max-height: 30%;
+}
+
+td {
+    width: 100%;
+    border-radius: 20px;
+    border: 2px solid transparent;
+    padding: 2%;
+}
+
+tr {
+    height: 20vh;
+    
+}
+
+.image {
+    max-height: 50%;
+    width: auto;
+    
+}
+
+
+tr:nth-child(odd) td.tableHeader{
+    background-color: #2ec4b6cc;
+}
+
+tr:nth-child(odd) td.tableSummary{
+    background-color: #2ec4b680;
+}
+tr:nth-child(even) td.tableHeader{
+    background-color: #FF9F1Ccc;
+}
+tr:nth-child(even) td.tableSummary{
+    background-color: #FF9F1C80;
+}
+
+td.historyHeader {
+    width: 30%;
+}
+
+#factList {
+    width: 50%;
+    float: left;
+}
+
+#factPics {
+    width: 40%;
+    text-align: center;
+    display: inline-block;
+}
+
+#factList li {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+
+#factPics > img {
+    width: 80%;
+    height: auto;
+}
+
+#exampleTable {
+    table-layout: fixed;
+    width: 100%;
+
+}
+
+.exampleDescription {
+    text-align: center;
+}
+
+.tableImage {
+    width: 100%;
+    display: block;
+}
