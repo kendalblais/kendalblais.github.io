@@ -1,7 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     new Vue({
         el: '#calculator',
-        // define data - initial display text
         data() {
             return {
                 log: "",
@@ -40,10 +39,14 @@ document.addEventListener('DOMContentLoaded', function () {
                 try {
                     this.previousAns = eval(this.value);
                     this.value = this.previousAns;
+
+                    // change the color back to grey in case the previous calculation resulted in an error
                     document.getElementById("log").style.color = "grey";
                 }
                 catch(err) {
                     this.log = err.message;
+
+                    // change the color to red for the log to display the text
                     document.getElementById("log").style.color = "red";
                 }
                 
