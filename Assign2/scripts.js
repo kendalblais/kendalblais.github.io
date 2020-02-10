@@ -5,13 +5,18 @@ document.addEventListener('DOMContentLoaded', function () {
             return {
                 log: "",
                 value: "0",
-                previousAns: ""
+                previousAns: "",
+                justEvaluated: false
             };
         },
         methods: {
             append(character) {
-                if(this.value === "0"){
+                if(this.value === "0" || (this.justEvaluated && ["+", "-", "/", "*"].indexOf(character) < 0)){
                     this.value = "";
+                }
+
+                if(this.justEvaluated){
+                    this.justEvaluated = false;
                 }
 
                 if(character === "Ans"){
@@ -22,7 +27,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 
             },
             clearEntry() {
-                if(this.value.length === 1){
+                if(this.value.length === 1 || this.justEvaluated){
                     this.value = 0;
                 } else {
                     this.value = this.value.slice(0, this.value.length - 1);
@@ -35,6 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             calculate() {
                 this.log = this.value;
+                this.justEvaluated = true;
 
                 try {
                     this.previousAns = eval(this.value);
