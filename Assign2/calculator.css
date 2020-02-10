@@ -1,0 +1,78 @@
+#mainPageBody {
+    max-width: 600px;
+    height: 100vh;
+}
+
+#calculator {
+    background-color: grey;
+    border: 1px solid #a9a9a9;
+    border-radius: 5px;
+    height: 75%;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.screen-row {
+    margin: 0px;
+    height: 20%;
+    padding: 5px;
+}
+
+.button-row {
+    margin: 0px;
+    height: 13%;
+}
+
+.button-div {
+    margin: 0px;
+    padding: 5px;
+}
+
+button {
+    height: 100%;
+    width: 100%;
+    border-color: grey;
+    border-radius: 10px;
+    font-size: 2em;
+}
+
+#calculator-screen {
+    height: 100%;
+    padding: 2%;
+    background-color: lightgray;
+    box-sizing: border-box;
+    width: 100%;
+    color: black;
+}
+
+.log {
+    font-size: 3vh;
+    color: grey;
+}
+
+.operator {
+    background-color: orange;
+}
+
+.clear-key {
+    background-color: #D90429;
+}
+
+.screen-text {
+    display: inline-block;
+    text-align: right;
+    padding-left: 10px;
+    padding-right: 20px;
+    width: 100%;
+}
+
+.display {
+    font-size: 5vh;
+}
+
+@media only screen and (min-width: 600px) {
+    #mainPageBody {
+        width: 100%;
+    }
+    /*or anything you want to do*/ 
+}

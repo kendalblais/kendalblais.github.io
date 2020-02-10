@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link rel="stylesheet" href="calculator.css">
+        <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+        <script src="scripts.js"></script>
+    </head>
+    <body>
+        <div id="mainPageBody" class="mx-auto">
+            <div id="calculator" class="container-fluid">
+                <div class="row screen-row">
+                    <div id="calculator-screen">
+                        <div id="log" class="log screen-text">{{ log ? log : "&nbsp;" }}</div>
+                        <div class="display screen-text">{{ value }}</div>
+                    </div>
+                    
+                </div>
+                <div class="row button-row">
+                    <div class="col-6 button-div">
+                        <button type="button" class="clear-key" @click="clearAll" value="AC">AC</button>
+                    </div>
+                    <div class="col-6 button-div">
+                        <button type="button" class="clear-key" @click="clearEntry" value="CE">CE</button>
+                    </div>
+                </div>
+                <div class="row button-row">
+                    <div class="col-3 button-div">
+                        <button type="button" @click="append('7')" value="7">7</button>
+                    </div>
+                    <div class="col-3 button-div">
+                        <button type="button" @click="append('8')" value="8">8</button>
+                    </div>
+                    <div class="col-3 button-div">
+                        <button type="button" @click="append('9')" value="9">9</button>
+                    </div>
+                    <div class="col-3 button-div">
+                        <button type="button" class="operator" @click="append('/')" value="/">/</button>
+                    </div>
+                </div>
+                <div class="row button-row">
+                    <div class="col-3 button-div">
+                        <button type="button" @click="append('4')" value="4">4</button>
+                    </div>
+                    <div class="col-3 button-div">
+                        <button type="button" @click="append('5')" value="5">5</button>
+                    </div>
+                    <div class="col-3 button-div">
+                        <button type="button" @click="append('6')" value="6">6</button>
+                    </div>
+                    <div class="col-3 button-div">
+                        <button type="button" class="operator" @click="append('*')" value="*">*</button>
+                    </div>
+                </div>
+                <div class="row button-row">
+                    <div class="col-3 button-div">
+                        <button type="button" @click="append('1')" value="1">1</button>
+                    </div>
+                    <div class="col-3 button-div">
+                        <button type="button" @click="append('2')" value="2">2</button>
+                    </div>
+                    <div class="col-3 button-div">
+                        <button type="button" @click="append('3')" value="3">3</button>
+                    </div>
+                    <div class="col-3 button-div">
+                        <button type="button" class="operator" @click="append('-')" value="-">-</button>
+                    </div>
+                </div>
+                <div class="row button-row">
+                    <div class="col-3 button-div">
+                        <button type="button" @click="append('(')" value="(">(</button>
+                    </div>
+                    <div class="col-3 button-div">
+                        <button type="button" @click="append('0')" value="0">0</button>
+                    </div>
+                    <div class="col-3 button-div">
+                        <button type="button" @click="append(')')" value=")">)</button>
+                    </div>
+                    <div class="col-3 button-div">
+                        <button type="button" class="operator" @click="append('+')" value="+">+</button>
+                    </div>
+                </div>
+                <div class="row button-row">
+                    <div class="col-3 button-div">
+                        <button type="button" @click="append('Ans')" value="Ans">Ans</button>
+                    </div>
+                    <div class="col-3 button-div">
+                        <button type="button" @click="append('.')" value=".">.</button>
+                    </div>
+                    <div class="col-6 button-div">
+                        <button type="button" class="operator" @click="calculate('=')" value="=">=</button>
+                    </div>
+                </div>
+            
+            </div>
+
+        </div>
+    </body>
+</html>
